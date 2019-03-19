@@ -71,4 +71,18 @@ return_matrix_and_plot_basic_genomic_alterations_heatmaps <- function(prepared_v
 
 
 
-name <- function()
+name <- function(genomic_alterations_matrixes_list){
+  
+  data_wip <- lapply(genomic_alterations_matrixes_list, function(x) abs(x))
+  data_wip <- lapply(data_wip, function(x) {x[x == 2] <- 1;x})
+  data_wip <- lapply(data_wip, function(x) {x[x == -2] <- -1;x})
+  results <- data.frame(matrix(ncol=2,nrow=length(data_wip)))
+  for (i in 1:length(data_wip)){
+    cdata <- data_wip[[i]]
+    results[i,1] <- names(data_wip[i])
+    results[i,2] <- sum((apply(cdata,1, function(x) sum(x))) > (ncol(cdata)/2))
+    
+    #Continuar a testar no outro ficheiro do R. Por o carregar do GlycoColor no ficheiro do Analysis. Adicionar
+    #dois argumentos, uma lista dos símbolos do cancro que queremos, e uma lsita das cores.
+  }
+}

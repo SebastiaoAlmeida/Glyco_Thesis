@@ -1,5 +1,5 @@
-source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Functions/Mutations_First_Work_Functions.R")
-source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Functions/CNV_Functions.R")
+source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Git/Functions/Mutations_First_Work_Functions.R")
+source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Git/Functions/CNV_Functions.R")
 library(plyr)
 
 old_relgenes_csvname <- "December14 38 genes list.csv"

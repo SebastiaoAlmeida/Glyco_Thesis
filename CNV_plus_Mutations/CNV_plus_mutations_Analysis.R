@@ -1,6 +1,6 @@
-source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Functions/Mutations_First_Work_Functions.R")
-source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Functions/CNV_Functions.R")
-source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Functions/CNV_plus_Mutations_Functions.R")
+source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Git/Functions/Mutations_First_Work_Functions.R")
+source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Git/Functions/CNV_Functions.R")
+source("C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Code/Git/Functions/CNV_plus_Mutations_Functions.R")
 library(gsubfn)
 
 plot_directory <- "C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Plots/CNV+Mutations/" 
@@ -10,5 +10,5 @@ old_rel_genes <- names(read.csv(file = "C:/Users/Sebastião Almeida/Desktop/Tese/
 rel_genes <- names(read.csv(file = "C:/Users/Sebastião Almeida/Desktop/Tese/Main_Work/Datasets/Gene_Lists/Project_Genes.csv", colClasses = "character")[1,])
 prepared_data <- prepare_CNV_and_variant_data_matching(TCGA_data,CNVdata,old_rel_genes)
 
-genomic_aterations_matrix <- return_matrix_and_plot_basic_genomic_alterations_heatmaps(prepared_data[[1]],prepared_data[[2]],plot_directory,"Original Genes")
+genomic_alterations_matrixes_list <- return_matrix_and_plot_basic_genomic_alterations_heatmaps(prepared_data[[1]],prepared_data[[2]],plot_directory,"Original Genes")
 
